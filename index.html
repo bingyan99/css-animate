@@ -6,7 +6,7 @@
   <title>css animate</title>
 </head>
 <body>
-  <h3>文字边框动画</h3>
+  <h3>1、文字边框动画</h3>
   <div id="draw">
     <button class="draw-btn">Hover me</button>
   </div>
@@ -66,7 +66,7 @@
       transition: border-color 0s ease-out 0.6s, width 0.3s ease-out 0.6s, height 0.3s ease-out 1s;
     }
   </style>
-  <h3>冰冻效果</h3>
+  <h3>2、冰冻效果</h3>
   <div id="frozen-btn">
     <button class="green">Hover me</button>
     <button class="purple">Hover me</button>
@@ -129,7 +129,7 @@
     }
 
   </style>
-  <h3>一闪而过</h3>
+  <h3>3、一闪而过</h3>
   <div id="shiny-shadow">
     <button><span>Hover me</span></button>
   </div>
@@ -176,7 +176,7 @@
       -webkit-transition: all 600ms cubic-bezier(0.3, 1, 0.2, 1);
     }
   </style>
-  <h3>宽高等比</h3>
+  <h3>4、宽高等比</h3>
   <div class="whratio">
     <div class="box">文本内容</div>
   </div>
@@ -202,7 +202,7 @@
       padding: 0 20px;
     }
   </style>
-  <h3>文字渐变</h3>
+  <h3>5、文字渐变</h3>
   <p class="gradient-text">Gradient text</p>
   <style>
     .gradient-text {
@@ -212,7 +212,7 @@
       -webkit-background-clip: text;
     }
   </style>
-  <h3>悬停下滑线</h3>
+  <h3>6、悬停下滑线</h3>
    <p class="hover-underline-animation">Hover this text to see the effect!</p>
    <style>
      .hover-underline-animation {
@@ -239,7 +239,7 @@
        transform-origin: bottom left;
      }
    </style>
-   <h3>加载旋转器</h3>
+   <h3>7、加载旋转器</h3>
    <div class="donut"></div>
 
    <style>
@@ -261,7 +261,7 @@
       animation: donut-spin 1.2s linear infinite;
     }
    </style>
-   <h3>阻止外边距合并</h3>
+   <h3>8、阻止外边距合并</h3>
    <div>
     中国气象台显示，10月12日夜间至15日中国将有一次大范围降雨降温过程 ，冷空气将持续催寒，内蒙古中西部等地局地降温幅度可达10℃左右 ，西南地区阴雨不断。
     <div class="outer">
@@ -281,6 +281,54 @@
     margin-top: 10px;
   }
   </style>
-  
+  <h3>9、魔力转圈圈</h3>
+   <div class="margic"></div>
+   <style>
+     .margic {
+       width: 200px;
+       height: 200px;
+       background: url(time.jpg);
+       background-size: contain;
+       border: 1px solid #000;
+       border-radius: 50%;
+       transition: all 8s;
+     }
+ 
+     .margic:hover {
+       transform: rotate(10turn)
+     }
+   </style>
+   <h3>10、loading动画</h3>
+   <div class="bouncing-loader">
+    <div></div>
+    <div></div>
+    <div></div>
+   </div>
+   <style>
+   @keyframes bouncing-loader {
+      to {
+        opacity: 0.1;
+        transform: translate3d(0, -1rem, 0);
+      }
+    }
+    .bouncing-loader {
+      display: flex;
+      justify-content: center;
+    }
+    .bouncing-loader > div {
+      width: 1rem;
+      height: 1rem;
+      margin: 3rem 0.2rem;
+      background: #8385aa;
+      border-radius: 50%;
+      animation: bouncing-loader 0.6s infinite alternate;
+    }
+    .bouncing-loader > div:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    .bouncing-loader > div:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+   </style>
 </body>
 </html>
